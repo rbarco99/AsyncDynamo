@@ -1,0 +1,34 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: "cleanArchTest"
+  devtools:
+    add-properties: false
+  h2:
+    console:
+      enabled: true
+      path: "/h2"
+  profiles:
+    include: null
+app:
+  name: "NU0197001_VinculacionTransversalFront_MR"
+  component: "ms_customer_acquisition"
+  perfil: "local"
+  data:
+    dynamodb:
+      env: "pdn"
+      uri: "http://localhost:8000"
+      database:
+        name: "poc_databases"
+aws:
+  dynamodb:
+    endpoint: http://dynamodb.us-east-1.amazonaws.com
+    prefix: nu0034001-vinculacion-transversal-dev-dy-
+    region:
+    tableName: "nu0197001-front-vinculacion-transversal-dev-dy-catalogs"
+    accessKeyId: "AKIATO7LTQYSOB3SXOFB"
+    secretAccessKey: "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"
+    secret:
+      region:
+      name:
