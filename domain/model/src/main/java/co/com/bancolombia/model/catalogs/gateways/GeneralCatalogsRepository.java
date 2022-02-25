@@ -14,4 +14,5 @@ public interface GeneralCatalogsRepository {
 
     Mono<Void>communicationTest();
 
+
 }

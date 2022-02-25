@@ -24,6 +24,7 @@ public class ApiRest {
     //private final UserRepository userRepository;
     private final GeneralCatalogsRepository generalCatalogsRepository;
 
+
     @GetMapping(path = "/generalCatalogs")
     public Mono<CatalogResponse> getGeneralCatalog() {
         CatalogQuery catQuery = CatalogQuery.builder().build();
