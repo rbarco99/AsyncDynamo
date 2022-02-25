@@ -15,12 +15,6 @@ app:
   name: "NU0197001_VinculacionTransversalFront_MR"
   component: "ms_customer_acquisition"
   perfil: "local"
-  data:
-    dynamodb:
-      env: "pdn"
-      uri: "http://localhost:8000"
-      database:
-        name: "poc_databases"
 aws:
   dynamodb:
     endpoint: http://dynamodb.us-east-1.amazonaws.com

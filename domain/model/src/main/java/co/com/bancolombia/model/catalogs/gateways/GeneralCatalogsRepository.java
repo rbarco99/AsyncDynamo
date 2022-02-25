@@ -12,4 +12,6 @@ public interface GeneralCatalogsRepository {
 
     Mono<Void> saveCatalog(CatalogResponse catalogs);
 
+    Mono<Void>communicationTest();
+
 }

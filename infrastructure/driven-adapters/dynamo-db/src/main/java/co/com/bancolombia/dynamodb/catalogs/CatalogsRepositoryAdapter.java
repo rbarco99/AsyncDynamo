@@ -38,4 +38,9 @@ public class CatalogsRepositoryAdapter extends AdapterOperations<CatalogResponse
         catalogData.setCode("TestCode02");
         return this.saveEntity(catalogData);
     }
+
+    @Override
+    public Mono<Void> communicationTest() {
+        return this.saveEntity(CatalogData.builder().code("test01catalog").build());
+    }
 }

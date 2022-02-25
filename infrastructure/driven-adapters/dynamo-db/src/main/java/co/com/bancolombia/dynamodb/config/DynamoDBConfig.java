@@ -1,7 +1,6 @@
 package co.com.bancolombia.dynamodb.config;
 
 import co.com.bancolombia.dynamodb.catalogs.CatalogData;
-import co.com.bancolombia.dynamodb.monitoring.MonitoringData;
 import co.com.bancolombia.model.secrets.DynamoSecretModel;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,11 +16,6 @@ import java.net.URI;
 public class DynamoDBConfig {
 
     @Bean
-    UserMapper userMapper() {
-        return new UserMapper();
-    }
-
-    @Bean
     DynamoDbAsyncClient dbClient(DynamoSecretModel dynamoSecretModel) {
         return DynamoDbAsyncClient.builder()
                 .endpointOverride(URI.create("http://dynamodb.us-east-1.amazonaws.com"))
@@ -35,15 +29,5 @@ public class DynamoDBConfig {
         return DynamoDbEnhancedAsyncClient.builder().dynamoDbClient(dbClient).build();
     }
 
-    @Bean
-    DynamoDbAsyncTable<MonitoringData> dbMonitoringTable(DynamoDbEnhancedAsyncClient dbEnhancedClient) {
-        return dbEnhancedClient.table("nu0197001-front-vinculacion-transversal-dev-dy-monitoring",
-                TableSchema.fromBean(MonitoringData.class));
-    }
-    @Bean
-    DynamoDbAsyncTable<CatalogData> dbCatalogsTable(DynamoDbEnhancedAsyncClient dbEnhancedClient) {
-        return dbEnhancedClient.table("nu0197001-front-vinculacion-transversal-dev-dy-catalogs",
-                TableSchema.fromBean(CatalogData.class));
-    }
 
 }

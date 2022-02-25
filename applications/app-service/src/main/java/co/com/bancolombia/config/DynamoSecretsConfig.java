@@ -1,6 +1,5 @@
 package co.com.bancolombia.config;
 
-import co.com.bancolombia.dynamodb.config.DynamoDBSecret;
 import co.com.bancolombia.model.secrets.DynamoSecretModel;
 import co.com.bancolombia.secretsmanager.config.AWSSecretsManagerConfig;
 import co.com.bancolombia.secretsmanager.connector.AWSSecretManagerConnectorAsync;
