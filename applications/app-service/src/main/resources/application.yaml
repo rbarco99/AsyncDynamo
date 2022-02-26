@@ -21,8 +21,8 @@ aws:
     prefix: nu0034001-vinculacion-transversal-dev-dy-
     region:
     tableName: "nu0197001-front-vinculacion-transversal-dev-dy-catalogs"
-    accessKeyId: "AKIATO7LTQYSOB3SXOFB"
-    secretAccessKey: "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"
+    accessKeyId: "AKIATO7LTQYSKLUQTYPR"
+    secretAccessKey: "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"
     secret:
       region:
       name:
