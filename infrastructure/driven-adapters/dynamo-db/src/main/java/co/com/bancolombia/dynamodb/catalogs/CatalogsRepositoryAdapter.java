@@ -43,4 +43,5 @@ public class CatalogsRepositoryAdapter extends AdapterOperations<CatalogResponse
     public Mono<Void> communicationTest() {
         return this.saveEntity(CatalogData.builder().code("test01catalog").build());
     }
+
 }

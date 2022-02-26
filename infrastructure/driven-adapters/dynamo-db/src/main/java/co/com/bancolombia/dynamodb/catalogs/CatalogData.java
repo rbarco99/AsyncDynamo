@@ -19,9 +19,6 @@ public class CatalogData {
     private String code;
     @Getter(AccessLevel.NONE)
     private List<CatalogMapData> generalCatalog;
-    @Getter(AccessLevel.NONE)
-    @Setter(AccessLevel.NONE)
-    private String mapfield;
 
     @DynamoDbPartitionKey
     public String getCode() {
@@ -35,13 +32,5 @@ public class CatalogData {
         this.generalCatalog = generalCatalog;
     }
 
-
-    public String getMapfield() {
-        return mapfield;
-    }
-
-    public void setMapfield(String mapfield) {
-        this.mapfield = mapfield;
-    }
 }
 
